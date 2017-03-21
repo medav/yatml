@@ -1,7 +1,3 @@
-############################################################
-# Part 3: Numeric Gradient Search.
-############################################################
-
 import matplotlib.pyplot as plt
 import numpy as np
 import random
