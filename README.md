@@ -4,7 +4,7 @@
 
 This guide focuses on practical use of Neural Networks (NNs) (a sub-topic of machine learning). The following topics will be covered:
 
-## 1. Fudementals
+## 1. Fundamentals
 ### 1.1 A 10,000 Foot View of Regression
 * What is Linear regression?
 * What are the trainable parameters?
