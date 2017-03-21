@@ -1,5 +1,5 @@
 ############################################################
-# Part 2: Analytic Gradient Search.
+# Part 4: Analytic Gradient Search.
 ############################################################
 
 import matplotlib.pyplot as plt

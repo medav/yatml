@@ -1,5 +1,5 @@
 ############################################################
-# Part 2: Numeric Gradient Search.
+# Part 3: Numeric Gradient Search.
 ############################################################
 
 import matplotlib.pyplot as plt

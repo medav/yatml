@@ -1,5 +1,5 @@
 ############################################################
-# Part 1: Local Random Search. 
+# Part 2: Local Random Search. 
 ############################################################
 
 import matplotlib.pyplot as plt
