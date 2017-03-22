@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Trained weights and binary files
+*.h5
+*.bin
