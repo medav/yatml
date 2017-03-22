@@ -15,7 +15,7 @@
 
     "train": {
         "max_words": 5000,
-        "num_epochs": 20,
+        "num_epochs": 50,
         "batch_size": 100
     }
 }
