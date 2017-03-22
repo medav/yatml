@@ -1,0 +1,21 @@
+{
+    "handles": [
+        "RealDonaldTrump",
+        "donttrythis",
+        "ericandre",
+        "ProBirdRights"
+    ],
+
+    "twitter_keys": {
+        "consumer_key": "",
+        "consumer_secret": "",
+        "access_token_key": "",
+        "access_token_secret": ""
+    },
+
+    "train": {
+        "max_words": 5000,
+        "num_epochs": 20,
+        "batch_size": 100
+    }
+}
