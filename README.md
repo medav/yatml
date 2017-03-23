@@ -13,16 +13,18 @@ This guide focuses on practical use of Neural Networks (NNs) (a sub-topic of mac
 * What is optimization (in the context of CS)?
 * How can we formulate regressions as an optimization problem?
 * Stochastic Gradient Decent (SGD) overview.
-
-## 2. Neural Networks
-### 2.1 What are Neural Networks?
-* NNs are a computational graph designed to model an unknown high-dimensional non-linear function.
-* They involve various operations with trainable parameters put together in **layers** which can be optimized.
-* Simple 1-layer fully-connected example.
-### 2.2 Mathematics of Neural Networks
-* Auto-differentiation
+### 1.3 Mathematics of Computational Graphs
 * Gradient Calculation
 * SGD as a training mechanism
+
+## 2. Neural Networks
+### Introduction to TensorFlow
+* How to describe graphs
+* How to perform simple math
+### Neural Networks as Computational Graphs
+* How a NN is represented as a computational graph
+* How auto-differentiation works
+
 
 ## 3. Example: Tweet Author Classifier
 
