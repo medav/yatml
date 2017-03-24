@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 
+plt.xkcd()
+
 # This is adapted from Andrej Karpathy's blog:
 # http://karpathy.github.io/neuralnets/
 # written in Python instead of JS (Obviously)

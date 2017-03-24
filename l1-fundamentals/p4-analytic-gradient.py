@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 
+plt.xkcd()
+
 # This is adapted from Andrej Karpathy's blog:
 # http://karpathy.github.io/neuralnets/
 # written in Python instead of JS (Obviously)
@@ -9,7 +11,6 @@ import random
 # Define out unknown function we want to maximize
 def unknown_function(a, b):
     return a*b
-
 
 # Here we define our analytic gradients
 def dfda(a, b):
