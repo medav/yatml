@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+plt.xkcd()
+
 # Those same random points
 x = [1,1,2,3.5,5,6,7.5,8,8,10]
 y = [2,1,5,6.5,11,12,15,15,16,21]
@@ -25,10 +27,10 @@ def func(a, b, x, y):
 #      because they are non-trainable variables!
 
 def dfda(a, b, x, y):
-    return 2*a*x*x + 2*b*x - 2*x*y
+    return 2*(a*x+b-y)*x
 
 def dfdb(a, b, x, y):
-    return 2*a*x - 2*y + 2*b
+    return 2*(a*x+b-y)
 
 # Define our initial "guess". We are going to
 # guess a flat line with intercept at y-bar.
@@ -39,7 +41,16 @@ b = np.mean(y)
 # by each iteration
 step_size = 0.001
 
+al = []
+bl = []
+
 for i in range(10000):
+    # Let's record a and b every time it see's the 
+    # first point.
+    if i % num_pts == 0:
+        al.append(a)
+        bl.append(b)
+
     # Here we pick a point on the list to "train"
     # on. This loop will simply go through all the 
     # points in our list over and over.
@@ -57,4 +68,8 @@ for i in range(10000):
     b = b - step_size * dfdb(a, b, xp, yp)
 
 
+
 print('Gradient Search: a = {}, b = {}'.format(a, b))
+
+plt.plot(al, bl)
+plt.show()
