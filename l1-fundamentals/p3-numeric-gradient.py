@@ -40,8 +40,8 @@ def numeric_gradient_search(func, start_a, start_b, h, step_size):
 
         # Update our point based on the approximated
         # gradients
-        a = a + step_size * dfda
-        b = b + step_size * dfdb
+        a = a - step_size * dfda
+        b = b - step_size * dfdb
 
     return (a, b), al, bl
 

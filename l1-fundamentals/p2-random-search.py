@@ -18,7 +18,7 @@ start_b = 3
 
 def random_local_search(func, start_a, start_b, tweak_amt):
     # Store the best output
-    best = -999999
+    best = 999999
 
     # Initilize our point
     a = start_a
@@ -39,7 +39,7 @@ def random_local_search(func, start_a, start_b, tweak_amt):
 
         # If our output is better, update a and b and
         # record it in our lists.
-        if out > best:
+        if out < best:
             a = a_try
             b = b_try
             best = out

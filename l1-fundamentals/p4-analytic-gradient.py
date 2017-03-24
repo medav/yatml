@@ -42,8 +42,8 @@ def analytic_gradient_search(func, start_a, start_b, step_size):
         out = func(a, b)
 
         # Update our point based on analytic gradients
-        a = a + step_size * dfda(a, b)
-        b = b + step_size * dfdb(a, b)
+        a = a - step_size * dfda(a, b)
+        b = b - step_size * dfdb(a, b)
 
     return (a, b), al, bl
 
