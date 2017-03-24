@@ -7,46 +7,47 @@ import random
 # written in Python instead of JS (Obviously)
 
 # Define out unknown function we want to maximize
-def unknown_function(x, y):
-    return x*y
+def unknown_function(a, b):
+    return a*b
+
 
 # Here we define our analytic gradients
-def dfdx(x, y):
-    return y
+def dfda(a, b):
+    return b
 
-def dfdy(x, y):
-    return x
+def dfdb(a, b):
+    return a
 
 # Define our initial "guess" for a point.
-start_x = -2
-start_y = 3
+start_a = -2
+start_b = 3
 
-def analytic_gradient_search(func, start_x, start_y, step_size):
+def analytic_gradient_search(func, start_a, start_b, step_size):
     # Initilize our point
-    x = start_x
-    y = start_y
+    a = start_a
+    b = start_b
 
     # Keep a list of all the points we visit so we can
     # plot it later for fun!
-    xl = []
-    yl = []
+    al = []
+    bl = []
     
     for i in range(100):
         # Record our current point.
-        xl.append(x)
-        yl.append(y)
+        al.append(a)
+        bl.append(b)
 
         # How did we do?
-        out = func(x, y)
+        out = func(a, b)
 
         # Update our point based on analytic gradients
-        x = x + step_size * dfdx(x, y)
-        y = y + step_size * dfdy(x, y)
+        a = a + step_size * dfda(a, b)
+        b = b + step_size * dfdb(a, b)
 
-    return (x, y), xl, yl
+    return (a, b), al, bl
 
-(best_x, best_y), x_list, y_list = analytic_gradient_search(unknown_function, start_x, start_y, step_size=0.01)
+(best_a, best_b), a_list, b_list = analytic_gradient_search(unknown_function, start_a, start_b, step_size=0.01)
 
-print('Best points: ({}, {})'.format(best_x, best_y))
-plt.plot(x_list, y_list)
+print('Best points: ({}, {})'.format(best_a, best_b))
+plt.plot(a_list, b_list)
 plt.show()

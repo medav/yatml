@@ -7,44 +7,44 @@ import random
 # written in Python instead of JS (Obviously)
 
 # Define out unknown function we want to maximize
-def unknown_function(x, y):
-    return x*y
+def unknown_function(a, b):
+    return a*b
 
 # Define our initial "guess" for a point.
-start_x = -2
-start_y = 3
+start_a = -2
+start_b = 3
 
-def numeric_gradient_search(func, start_x, start_y, h, step_size):
+def numeric_gradient_search(func, start_a, start_b, h, step_size):
     # Initilize our point
-    x = start_x
-    y = start_y
+    a = start_a
+    b = start_b
 
     # Keep a list of all the points we visit so we can
     # plot it later for fun!
-    xl = []
-    yl = []
+    al = []
+    bl = []
     
     for i in range(100):
         # Record our current point.
-        xl.append(x)
-        yl.append(y)
+        al.append(a)
+        bl.append(b)
 
         # How did we do?
-        out = func(x, y)
+        out = func(a, b)
 
         # Approximate derivative of f in terms of x and y
-        dfdx = (func(x + h, y) - out) / h
-        dfdy = (func(x, y + h) - out) / h
+        dfda = (func(a + h, b) - out) / h
+        dfdb = (func(a, b + h) - out) / h
 
         # Update our point based on the approximated
         # gradients
-        x = x + step_size * dfdx
-        y = y + step_size * dfdy
+        a = a + step_size * dfda
+        b = b + step_size * dfdb
 
-    return (x, y), xl, yl
+    return (a, b), al, bl
 
-(best_x, best_y), x_list, y_list = numeric_gradient_search(unknown_function, start_x, start_y, h=0.0001, step_size=0.01)
+(best_a, best_b), a_list, b_list = numeric_gradient_search(unknown_function, start_a, start_b, h=0.0001, step_size=0.01)
 
-print('Best points: ({}, {})'.format(best_x, best_y))
-plt.plot(x_list, y_list)
+print('Best points: ({}, {})'.format(best_a, best_b))
+plt.plot(a_list, b_list)
 plt.show()
