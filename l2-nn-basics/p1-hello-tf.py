@@ -3,24 +3,30 @@ import tensorflow as tf
 
 # First, let's create a "placeholder", which is
 # the value we as the user supply to the graph.
-x = tf.placeholder(tf.float32, [2, 2])
+x = tf.placeholder(tf.float32, shape=None)
 
-# Now let's create a constant matrix in the graph
-mat = tf.constant([[0,1],[1,0]], dtype=tf.float32)
+# Here we create two variables: a and b. We can
+# give them default values. 
+a = tf.Variable(1, dtype=tf.float32, name="weight")
+b = tf.Variable(2, dtype=tf.float32, name="bias")
 
-# The output of our graph is x*mat as a matrix
-# multiplication.
-result = tf.matmul(x, mat)
+# Now we form the computational graph:
+f = a*x
+y = f + b
+
+# N.B. We could just as easily write:
+# y = a*x + b
 
 # Now we ask TensorFlow for a new session to run
-# things on.
+# things on and initialize variables
 sess = tf.InteractiveSession()
+tf.global_variables_initializer().run()
 
 # Here is the input we will feed to the graph.
-our_x = np.array([[1,2],[3,4]])
+our_x = 1.0
 
 # Now run the computational graph.
-tf_out = sess.run(result, feed_dict={x: our_x})
+y_out = sess.run(y, feed_dict={x: our_x})
 
 # Print the result.
-print(tf_out)
+print('y_out = {}'.format(y_out))

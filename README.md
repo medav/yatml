@@ -1,4 +1,5 @@
-# Yet Another Machine Learning Guide
+# Yet Another Tutorial for Machine Learning
+Fundamental Mathematics of Neural Networks and practical use on Windows with TensorFlow and Keras
 
 `Note: This is still in development and subject to change`
 
