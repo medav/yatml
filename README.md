@@ -1,8 +1,6 @@
 # Yet Another Tutorial for Machine Learning
 Fundamental Mathematics of Neural Networks and practical use on Windows with TensorFlow and Keras
 
-`Note: This is still in development and subject to change`
-
 This repository contains code demos and examples for the [Yatml Guide](https://1drv.ms/p/s!AhBV_pq3X7p3gs9uS6ygLdc01QTVFA). 
 
 Each Lesson contains a README with a brief description of each part and what it works.
